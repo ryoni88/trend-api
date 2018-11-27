@@ -1,15 +1,13 @@
 package com.naver.hackday.trendapi.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.select.Elements;
@@ -29,11 +27,14 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @EqualsAndHashCode
 @ToString
 public class TrendKeyword {
+    @Id
+    @GeneratedValue
+    private Long id;
+
     @JsonIgnore
     @Column(name = "keyword")
     private String keyword = "";
 
-    @Id
     @Column(name = "created_time", updatable = false)
     private LocalDateTime createdTime;
 

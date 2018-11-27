@@ -13,6 +13,6 @@ package com.naver.hackday.trendapi.repository;
  * @since 2018-11-19
  */
 @RepositoryRestResource(path = "trendKeyword", collectionResourceRel = "trendKeyword")
-public interface TrendKeywordRepository extends JpaRepository<TrendKeyword, LocalDateTime> {
+public interface TrendKeywordRepository extends JpaRepository<TrendKeyword, Long> {
     TrendKeyword findTopByOrderByCreatedTimeDesc();
 }
