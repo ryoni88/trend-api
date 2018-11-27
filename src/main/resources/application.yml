@@ -10,12 +10,13 @@ spring:
     url: jdbc:mysql://10.114.45.86:13306/hackday?useUnicode=true&characterEncoding=utf8&jdbcCompliantTruncation=true&zeroDateTimeBehavior=convertToNull&connectTimeout=30000&socketTimeout=40000&serverTimezone=UTC
     username: soma
     password: thak123
+
     initial-size: 5
     max-total: 10
     max-idle: 10
 
 server:
-  port: 80
+  port: 8080
 
 logging:
   level:
@@ -25,5 +26,5 @@ logging:
     org.springframework.web: INFO
     com.navercorp.ncr: DEBUG
     java.sql: DEBUG
-  path: /Users/Naver/home1/irteam/logs/trendapi
-  file: /Users/Naver/home1/irteam/logs/trendapie.log
+  path: /home1/irteam/logs/trendapi
+  file: /home1/irteam/logs/trendapie.log

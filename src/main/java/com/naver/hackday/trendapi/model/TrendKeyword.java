@@ -27,6 +27,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Getter(AccessLevel.PUBLIC)
 @Setter(AccessLevel.PRIVATE)
 @EqualsAndHashCode
+@ToString
 public class TrendKeyword {
     @JsonIgnore
     @Column(name = "keyword")

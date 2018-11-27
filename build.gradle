@@ -36,9 +36,7 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.12.0'
     compile 'com.google.guava:guava:27.0-jre'
     compile 'org.jsoup:jsoup:1.11.3'
-    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
-    testImplementation('org.springframework.batch:spring-batch-test')
 }
