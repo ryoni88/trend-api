@@ -15,7 +15,7 @@ spring:
     max-idle: 10
 
 server:
-  port: 8080
+  port: 80
 
 logging:
   level:
@@ -26,4 +26,4 @@ logging:
     com.navercorp.ncr: DEBUG
     java.sql: DEBUG
   path: /home1/irteam/logs/trendapi
-  file: /home1/irteam/logs/trendapie.log
+  file: /home1/irteam/logs/trendapi.log
