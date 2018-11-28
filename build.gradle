@@ -46,15 +46,3 @@ jar {
     baseName = 'trend-api'
     version = '0.1.0'
 }
-
-springBoot {
-    executable = true
-    mainClass = 'com.naver.hackday.trendapi.TrendApiApplication'
-}
-
-compileJava.dependsOn(processResources)
-
-bootRun {
-    // Use Spring Boot DevTool only when we run Gradle bootRun task
-    classpath = sourceSets.main.runtimeClasspath + configurations.dev
-}
