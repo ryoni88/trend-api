@@ -18,6 +18,7 @@ apply plugin: 'io.spring.dependency-management'
 group = 'com.naver.hackday'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -39,4 +40,21 @@ dependencies {
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+
+jar {
+    baseName = 'trend-api'
+    version = '0.1.0'
+}
+
+springBoot {
+    executable = true
+    mainClass = 'com.naver.hackday.trendapi.TrendApiApplication'
+}
+
+compileJava.dependsOn(processResources)
+
+bootRun {
+    // Use Spring Boot DevTool only when we run Gradle bootRun task
+    classpath = sourceSets.main.runtimeClasspath + configurations.dev
 }
