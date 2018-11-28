@@ -58,4 +58,8 @@ public class TrendKeyword {
     public List<String> getKeywordList() {
         return Arrays.asList(StringUtils.split(keyword, "|||"));
     }
+
+    public LocalDateTime getCreatedTime() {
+        return createdTime;
+    }
 }
