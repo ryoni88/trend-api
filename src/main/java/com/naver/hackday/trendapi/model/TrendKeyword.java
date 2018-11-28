@@ -42,6 +42,11 @@ public class TrendKeyword {
     @Column(insertable = false)
     private Elements keywordNode;
 
+
+    public TrendKeyword() {
+    }
+
+
     public TrendKeyword(Elements keywordNode) {
         List<String> tempKeywordList = new ArrayList();
         keywordNode.stream().forEach(n -> tempKeywordList.add(n.text()));
