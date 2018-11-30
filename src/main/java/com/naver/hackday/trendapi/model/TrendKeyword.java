@@ -43,6 +43,9 @@ public class TrendKeyword {
     private Elements keywordNode;
 
 
+    public TrendKeyword() {
+    }
+
 
     public TrendKeyword(Elements keywordNode) {
         List<String> tempKeywordList = new ArrayList();
@@ -54,5 +57,9 @@ public class TrendKeyword {
 
     public List<String> getKeywordList() {
         return Arrays.asList(StringUtils.split(keyword, "|||"));
+    }
+
+    public LocalDateTime getCreatedTime() {
+        return createdTime;
     }
 }
