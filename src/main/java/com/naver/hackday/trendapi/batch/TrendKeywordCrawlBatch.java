@@ -22,7 +22,7 @@ public class TrendKeywordCrawlBatch {
     }
 
     // 애플리케이션 시작 후 10초 후에 첫 실행, 그 후 매 fixedDelay 밀리세컨드마다 주기적으로 실행한다.
-    @Scheduled(initialDelay = 10000, fixedDelay = 10000)
+    @Scheduled(initialDelay = 10000, fixedDelay = 1800000)
     public void crawl() {
         Document doc = null;
         try {
